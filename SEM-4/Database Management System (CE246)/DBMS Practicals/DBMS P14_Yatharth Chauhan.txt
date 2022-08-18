@@ -1,0 +1,23 @@
+20DCE019 - Yatharth Chauhan
+
+
+DECLARE
+   
+NUM NUMBER := 5;              
+FACT NUMBER := 1;            
+TEMP NUMBER;        
+   
+BEGIN
+   
+TEMP :=NUM;
+ 
+WHILE( TEMP>0 )              
+LOOP
+FACT := FACT*TEMP;
+TEMP := TEMP-1;
+ 
+END LOOP;
+ 
+DBMS_OUTPUT.PUT_LINE('FACTORIAL OF '|| NUM || ' IS ' || FACT);
+ 
+END; 
