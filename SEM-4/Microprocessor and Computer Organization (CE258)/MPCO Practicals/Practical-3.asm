@@ -1,0 +1,16 @@
+
+; 20DCE019 - YATHARTH CHAUHAN
+
+; Exchange the contents of memory locations 2000H and 4000H 
+
+ORG 100H
+
+ORG 100H
+MOV [4000H],32H
+MOV [2000H],16H
+MOV AX,[4000H]
+MOV BX,[2000H]
+MOV [4000H],AX
+MOV [2000H],AX 
+
+RET

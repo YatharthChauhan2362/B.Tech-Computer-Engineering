@@ -1,0 +1,30 @@
+
+; Program to find average of n numbers 
+
+org 100h
+
+MOV [4000H],01H
+MOV [4001H],02H
+MOV [4002H],03H
+MOV [4003H],04H
+MOV [4004H],05H
+MOV [4005H],06H
+MOV [4006H],07H
+MOV [4007H],08H
+MOV [4008H],09H
+MOV [4009H],0aH
+
+MOV SI,4000H
+MOV CL,0aH   
+MOV DL,CL 
+
+L1: 
+
+MOV BL,[SI]
+ADD AL,BL 
+
+INC SI
+LOOP L1
+DIV DL
+
+ret
