@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(370,350)" to="(370,450)"/>
+    <wire from="(320,390)" to="(320,490)"/>
+    <wire from="(460,210)" to="(490,210)"/>
+    <wire from="(470,470)" to="(500,470)"/>
+    <wire from="(360,80)" to="(390,80)"/>
+    <wire from="(370,350)" to="(400,350)"/>
+    <wire from="(280,120)" to="(280,230)"/>
+    <wire from="(240,80)" to="(360,80)"/>
+    <wire from="(360,80)" to="(360,190)"/>
+    <wire from="(360,190)" to="(410,190)"/>
+    <wire from="(410,450)" to="(420,450)"/>
+    <wire from="(240,390)" to="(320,390)"/>
+    <wire from="(370,450)" to="(380,450)"/>
+    <wire from="(320,390)" to="(400,390)"/>
+    <wire from="(280,120)" to="(390,120)"/>
+    <wire from="(320,490)" to="(420,490)"/>
+    <wire from="(280,230)" to="(410,230)"/>
+    <wire from="(240,120)" to="(280,120)"/>
+    <wire from="(240,350)" to="(370,350)"/>
+    <wire from="(450,100)" to="(490,100)"/>
+    <wire from="(460,370)" to="(500,370)"/>
+    <comp lib="5" loc="(490,210)" name="LED"/>
+    <comp lib="6" loc="(571,375)" name="Text">
+      <a name="text" val="difference"/>
+    </comp>
+    <comp lib="6" loc="(540,479)" name="Text"/>
+    <comp lib="5" loc="(500,370)" name="LED"/>
+    <comp lib="6" loc="(386,375)" name="Text">
+      <a name="text" val="B"/>
+    </comp>
+    <comp lib="6" loc="(405,435)" name="Text">
+      <a name="text" val="A'"/>
+    </comp>
+    <comp lib="6" loc="(568,92)" name="Text">
+      <a name="text" val="sum"/>
+    </comp>
+    <comp lib="6" loc="(569,220)" name="Text">
+      <a name="text" val="carry"/>
+    </comp>
+    <comp lib="0" loc="(240,120)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(450,100)" name="XOR Gate"/>
+    <comp lib="5" loc="(490,100)" name="LED"/>
+    <comp lib="6" loc="(373,57)" name="Text">
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="5" loc="(500,470)" name="LED"/>
+    <comp lib="1" loc="(410,450)" name="NOT Gate"/>
+    <comp lib="6" loc="(405,478)" name="Text">
+      <a name="text" val="B'"/>
+    </comp>
+    <comp lib="1" loc="(470,470)" name="AND Gate"/>
+    <comp lib="1" loc="(460,370)" name="XOR Gate"/>
+    <comp lib="0" loc="(240,80)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(378,178)" name="Text">
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="6" loc="(375,115)" name="Text">
+      <a name="text" val="B"/>
+    </comp>
+    <comp lib="1" loc="(460,210)" name="AND Gate"/>
+    <comp lib="0" loc="(240,350)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(560,484)" name="Text">
+      <a name="text" val="Borrow"/>
+    </comp>
+    <comp lib="0" loc="(240,390)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(386,335)" name="Text">
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="6" loc="(379,223)" name="Text">
+      <a name="text" val="B"/>
+    </comp>
+  </circuit>
+</project>
