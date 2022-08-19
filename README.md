@@ -4,6 +4,8 @@ Year-1 | Year-2 | Year-3
 
 This repository is collection of all the Study Materials and submissions done by me**YATHARTH CHAUHAN - 20DCE019** throughout MY Bachelor's Degree which consists of `Study Materials`, `Practicals`, `Assignemnts`, `Pratical Files`, `Notes`, `External Practical Files` and `Exam Answersheets`.
 
+# Note: To access all materials(Drive Link), You can connect me on any plateform and send request access so I can give access to you then you can get all materials(PPT & Word Files, Assignemnts, Syllabus, Practical Files & Lab Manual, Notes etc.
+
 This readme also consists of all the details of all the semesters and the courses.
 
 **B.Tech -** Computer Engineering (CE) <br>
@@ -86,7 +88,7 @@ This readme also consists of all the details of all the semesters and the course
 | MA253       | DISCRETE MATHEMATICS                       |
 | HS121.02 A  | CREATIVITY, PROBLEM SOLVING AND INNOVATION |
 
-### All Materials of SEM-2
+### All Materials of SEM-3
 
 - [SEM 3](https://drive.google.com/drive/folders/19zlD4s1e6tJbEjeAW_6FmZ1L9CJ_VfS4?usp=sharing)
 
