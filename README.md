@@ -47,7 +47,7 @@ This readme also consists of all the details of all the semesters and the course
 
 ### Submissions
 
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-1)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-1)
 <br><br>
 
 ## SEM 2
@@ -69,7 +69,7 @@ This readme also consists of all the details of all the semesters and the course
 
 ### Submissions
 
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-2)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-2)
 <br><br>
 
 ## SEM 3
@@ -92,7 +92,7 @@ This readme also consists of all the details of all the semesters and the course
 
 ### Submissions
 
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-3)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-3)
 <br><br>
 
 ## SEM 4
@@ -115,7 +115,7 @@ This readme also consists of all the details of all the semesters and the course
 
 ### Submissions
 
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-4)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-4)
 <br><br>
 
 ## SEM 5
@@ -138,7 +138,7 @@ This readme also consists of all the details of all the semesters and the course
 
 ### Submissions
 
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-5)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-5)
 <br><br>
 
 <!-- ## SEM VI
@@ -153,7 +153,7 @@ CE349       | THEORY OF COMPUTATION
 HS132.02 A  | CONTRIBUTORY PERSONALITY DEVELOPMENT
 
 ### Submissions
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/rudrabarad/Bachelors-File-Submission/tree/master/SEM%20VI)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/rudrabarad/Bachelors-File-Submission/tree/master/SEM%20VI)
 <br><br>
 
 ## SEM VII
@@ -169,5 +169,5 @@ CS448       | SOFTWARE GROUP PROJECT - V
 CS473       | BLOCKCHAIN TECHNOLOGY & APPLICATIONS
 
 ### Submissions
-[![](https://img.shields.io/badge/Practical_Files_&_Assignments-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/rudrabarad/Bachelors-File-Submission/tree/master/SEM%20VII)
+[![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/rudrabarad/Bachelors-File-Submission/tree/master/SEM%20VII)
 <br><br> -->
