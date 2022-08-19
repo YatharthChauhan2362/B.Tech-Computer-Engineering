@@ -12,11 +12,13 @@ This readme also consists of all the details of all the semesters and the course
 **Degree Duration -** 4 Years [2020-2024] <br>
 **Student Id -** 20DCE019 <br>
 
+<!--
 > 📢 **PSA for those who also want to organize their stuff like this, I'd appreciate a proper credit by linking your repository back to this repository : :relieved:**
 >
 > ```
 > Repo inspired by [Yatharth Chauhan](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering)
 > ```
+-->
 
 # Semester Details
 
