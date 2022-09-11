@@ -18,6 +18,17 @@ This readme also consists of all the details of all the semesters and the course
 **Degree Duration -** 4 Years [2020-2024] <br>
 **Student Id -** 20DCE019 <br>
 
+# Let's connect with me <br>
+- [LinkedIn](https://www.linkedin.com/in/yatharth-chauhan-729674202/)
+- [Leetcode](https://leetcode.com/YatharthChauhan2362/)
+- [Fiverr](https://www.fiverr.com/users/yatharth2362/seller_dashboard)
+- [Instagram - Yatharth Chauhan](https://www.instagram.com/yatharth.chauhan_yc/)
+- [Instagram - VEENEXT Graphic Design](https://www.instagram.com/veenext.design/)
+- [Instagram - YC ART](https://www.instagram.com/art_yc_/)
+- [Snapchat](https://www.snapchat.com/add/yatharth.2362)
+- [Microsoft Learn](https://docs.microsoft.com/en-gb/users/yatharthchauhan-2803/)
+
+
 <!--
 > 📢 **PSA for those who also want to organize their stuff like this, I'd appreciate a proper credit by linking your repository back to this repository : :relieved:**
 >
