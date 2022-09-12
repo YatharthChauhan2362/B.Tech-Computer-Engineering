@@ -1,63 +1,70 @@
-#include <algorithm>
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
-struct Job
+typedef struct
 {
-
-    char id;
-    int dead;
-    int profit;
-};
-
-bool comparison(Job a, Job b)
+    int s;
+    int f;
+} activ;
+void input(activ arr[], int lng)
 {
-    return (a.profit > b.profit);
-}
-
-void printJobScheduling(Job arr[], int n)
-{
-
-    sort(arr, arr + n, comparison);
-
-    int result[n];
-    bool slot[n];
-
-    for (int i = 0; i < n; i++)
-        slot[i] = false;
-
-    for (int i = 0; i < n; i++)
+    cout << "Enter total " << lng << " Item's Start and Finish time :-\n\n";
+    for (int i = 0; i < lng; i++)
     {
+        cout << "Enter Start Time For Activity " << i + 1 << ":";
+        cin >> arr[i].s;
+        cout << "Enter Finish Time For Activity " << i + 1 << ":";
+        cin >> arr[i].f;
+        cout << "\n";
+    }
+}
+void display(activ arr[], int lng)
+{
+    int i;
+    cout << "Start Time: ";
+    for (i = 0; i < lng; i++)
+    {
+        cout << "\t" << arr[i].s;
+    }
+    cout << endl
+         << "Finish Time: ";
+    for (i = 0; i < lng; i++)
+    {
+        cout << "\t" << arr[i].f;
+    }
+    cout << endl;
+}
+bool compare(activ a, activ b)
+{
+    return a.f < b.f;
+}
+void MaxAct(activ arr[], int n)
+{
+    sort(arr, arr + n, compare);
 
-        for (int j = min(n, arr[i].dead) - 1; j >= 0; j--)
+    cout << "Following activities are selected :\n";
+    int i = 0;
+    cout << "(" << arr[i].s << ", " << arr[i].f << "), ";
+    for (int j = 1; j < n; j++)
+    {
+        if (arr[j].s >= arr[i].f)
         {
-
-            if (slot[j] == false)
-            {
-                result[j] = i;
-                slot[j] = true;
-                break;
-            }
+            cout << "(" << arr[j].s << ", "
+                 << arr[j].f << "), ";
+            i = j;
         }
     }
-
-    for (int i = 0; i < n; i++)
-        if (slot[i])
-            cout << arr[result[i]].id << " ";
 }
-
 int main()
 {
-    Job arr[] = {{'a', 2, 10},
-                 {'b', 1, 19},
-                 {'c', 2, 27},
-                 {'d', 3, 25},
-                 {'e', 4, 15}};
+    int n;
+    cout << "Enter total number of Activities :";
+    cin >> n;
+    activ arr[n];
+    input(arr, n);
+    cout << "Entered data \n";
+    display(arr, n);
+    MaxAct(arr, n);
 
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Following is maximum profit sequence of jobs: \n";
-    cout << "20DCE019-Yatharth Chuahan";
-
-    printJobScheduling(arr, n);
-    return 0;
+    cout << "\n20DCE019-Yatharth Chauhan";
 }
