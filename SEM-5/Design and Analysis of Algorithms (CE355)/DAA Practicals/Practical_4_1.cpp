@@ -1,69 +1,100 @@
-// Program to implement Kruskal’s algorithm using greedy method.
-// Kruskal's algorithm in C++
-
-#include <iostream>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
-int counter = 0;
-const int MAX = 1e4 + 5;
-int id[MAX], nodes, edges; // variables declaration
-pair<long long, pair<int, int>> p[MAX];
-void init()
+class DSU
 {
-    for (int i = 0; i < MAX; ++i)
-        id[i] = i;
-}
-int root(int x)
-{
-    while (id[x] != x)
-    {
-        id[x] = id[id[x]];
-        x = id[x];
-    }
-    return x;
-}
-void union1(int x, int y)
-{
-    int p = root(x);
-    int q = root(y);
-    id[p] = id[q];
-}
-// function to find the minimum cost spanning tree
-long long kruskal(pair<long long, pair<int, int>> p[])
-{
-    int x, y;
-    long long cost, minimumCost = 0;
+    int *parent;
+    int *rank;
 
-    for (int i = 0; i < edges; ++i)
+public:
+    DSU(int n)
     {
-        x = p[i].second.first;
-        y = p[i].second.second;
-        cost = p[i].first;
-        if (root(x) != root(y))
+        parent = new int[n];
+        rank = new int[n];
+
+        for (int i = 0; i < n; i++)
         {
-            minimumCost += cost;
-            union1(x, y);
+            parent[i] = -1;
+            rank[i] = 1;
         }
-        counter++;
     }
-    return minimumCost;
-}
+    int find(int i)
+    {
+        if (parent[i] == -1)
+            return i;
+
+        return parent[i] = find(parent[i]);
+    }
+    void unite(int x, int y)
+    {
+        int s1 = find(x);
+        int s2 = find(y);
+
+        if (s1 != s2)
+        {
+            if (rank[s1] < rank[s2])
+            {
+                parent[s1] = s2;
+                rank[s2] += rank[s1];
+            }
+            else
+            {
+                parent[s2] = s1;
+                rank[s1] += rank[s2];
+            }
+        }
+    }
+};
+
+class Graph
+{
+    vector<vector<int>> edgelist;
+    int V;
+
+public:
+    Graph(int V) { this->V = V; }
+    void addEdge(int x, int y, int w)
+    {
+        edgelist.push_back({w, x, y});
+    }
+
+    void kruskals_mst()
+    {
+        sort(edgelist.begin(), edgelist.end());
+        DSU s(V);
+        int ans = 0;
+        cout << "Following are the edges in the "
+                "constructed MST"
+             << endl;
+        for (auto edge : edgelist)
+        {
+            int w = edge[0];
+            int x = edge[1];
+            int y = edge[2];
+            if (s.find(x) != s.find(y))
+            {
+                s.unite(x, y);
+                ans += w;
+                cout << x << " -- " << y << " == " << w
+                     << endl;
+            }
+        }
+
+        cout << "Minimum Cost Spanning Tree: " << ans;
+
+        cout << "\n20DCE019-Yatharth Chauhan";
+    }
+};
+
 int main()
 {
-    int x, y;
-    long long weight, cost, minimumCost;
-    init();
-    cout << "Enter Nodes and edges";
-    cin >> nodes >> edges;
-    for (int i = 0; i < edges; ++i)
-    {
-        cout << "Enter the value of X, Y and edges";
-        cin >> x >> y >> weight;
-        p[i] = make_pair(weight, make_pair(x, y));
-    }
-    sort(p, p + edges);
-    minimumCost = kruskal(p);
-    cout << "Minimum cost is " << minimumCost << endl;
-    cout << "Counter: " << counter << endl;
+    Graph g(4);
+    g.addEdge(0, 1, 10);
+    g.addEdge(1, 3, 15);
+    g.addEdge(2, 3, 4);
+    g.addEdge(2, 0, 6);
+    g.addEdge(0, 3, 5);
+
+    // Function call
+    g.kruskals_mst();
     return 0;
 }
