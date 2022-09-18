@@ -1,74 +1,37 @@
-
-
-#include <iostream>
-#include <algorithm>
-#include <climits>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-  int changeMaking(int coin[], int n, int sum)
+void minFinder(int sum, int length, int coins[])
 {
-        int i, j;
-        int x, y;
+    int ans[sum], j = 0, i = 0;
 
-        int dp[n + 1][sum + 1];
-
-        for (j = 0; j <= sum; j++)
-        dp[0][j] = INT_MAX;
-
-        for (i = 1; i <= n; i++)
-        dp[i][0] = 0;
-
-        for (i = 1; i <= n; i++)
-   
+    for (i = length - 1; i >= 0; i--)
     {
-
-                for (j = 1; j <= sum; j++)
-       
+        while (sum >= coins[i])
         {
-                       
-            if (j >= coin[i - 1])
-           
-            {
-                             
-                x = dp[i - 1][j];
-                 
-               
-                y = 1 + dp[i][j - coin[i - 1]];
-                 
-           
-                dp[i][j] = min(x, y);
-                           
-            }
-             
-         
-            else  
-               dp[i][j] = dp[i - 1][j];
-                   
+            sum = sum - coins[i];
+            ans[j] = coins[i];
+            j++;
         }
-         
-   
     }
-     
-    return dp[n][sum];
+    cout << "\nTotal coins required are : " << j << "\nThey are : ";
+    for (i = 0; i < j; i++)
+        cout << ans[i] << " ";
+    cout << "\n";
 }
-
 int main()
 {
-        int n, sum;
-        cout << "Enter amount whose change required:";
-        cin >> sum;
-        cout << "Enter number of element available:";
-        cin >> n;
-       
-    int coin[n];
-       cout << "Enter value of coins:";
-       for (int i = 0; i < n; i++)
-    {
-               cin >> coin[n];
-           
-    }
-         
-    changeMaking(coin, n, sum);
-        return 0;
+    int length, i, sum;
+    cout << "\nEnter the total types of coins : ";
+    cin >> length;
+    int coins[length];
+    cout << "Enter the denomination of coins : ";
+    for (i = 0; i < length; i++)
+        cin >> coins[i];
+    int n = sizeof(coins) / sizeof(coins[0]);
+    sort(coins, coins + n);
+    cout << "Enter the final sum of coins : ";
+    cin >> sum;
+    minFinder(sum, length, coins);
+    cout << "\n20DCE019-Yatharth Chauhan";
+    return 0;
 }
