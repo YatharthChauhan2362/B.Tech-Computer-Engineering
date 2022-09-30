@@ -64,9 +64,10 @@ int minCoins(int coins[], int m, int V)
 
 int main()
 {
-    int coins[] = {18, 17, 5, 1};
+    // int coins[] = {18, 17, 5, 1};
+    int coins[] = {100, 25, 10, 5, 1};
     int m = sizeof(coins) / sizeof(coins[0]);
-    int V = 22;
+    int V = 289;
     cout << "Minimum coins required is "
          << minCoins(coins, m, V);
     cout << "\n20DCE019-Yatharth Chauhan";
