@@ -1,71 +1,73 @@
-#include <stdio.h>
-#define INFINITY 9999
-#define MAX 10
-void dijkstra(int G[MAX][MAX], int n, int startnode);
+#include <bits/stdc++.h>
+using namespace std;
+int minDistance(int dist[], bool visited[], int V)
+{
+    int min_index = 0;
+    int min = INT_MAX;
+    for (int i = 0; i < V; i++)
+    {
+        if (!visited[i] && dist[i] <= min)
+        {
+            min_index = i;
+            min = dist[i];
+        }
+    }
+    return min_index;
+}
+void dijkstra(int V, int source_index)
+{
+    int graph[V][V];
+    memset(graph, 0, sizeof(graph));
+    cout << "Consider Undirected Graph starts with index 0.\n";
+    for (int i = 0; i < V; i++)
+    {
+        int n;
+        cout << "Enter how many edges are connected with vertex " << i << ": ";
+        cin >> n;
+
+        for (int j = 0; j < n; j++)
+        {
+            int vertex, weight;
+            cout << "Enter which vertex is connected with " << i << " and weight of it: ";
+            cin >> vertex >> weight;
+            graph[i][vertex] = weight;
+        }
+        cout << "\n";
+    }
+    bool visited[V];
+    int dist[V];
+    for (int i = 0; i < V; i++)
+        dist[i] = INT_MAX;
+    dist[source_index] = 0;
+    for (int i = 0; i < V; i++)
+    {
+        int u = minDistance(dist, visited, V);
+        visited[u] = true;
+        for (int v = 0; v < V; v++)
+        {
+            if (!visited[v] && graph[u][v] && dist[u] != INT_MAX &&
+                dist[u] + graph[u][v] < dist[v])
+                dist[v] = dist[u] + graph[u][v];
+        }
+    }
+    for (int i = 0; i < V; i++)
+    {
+        if (dist[i] == INT_MAX)
+            cout << "Distance from " << source_index << " to " << i << " is infinite\n";
+        else
+            cout << "Distance from " << source_index << " to " << i << " is: " << dist[i] << "\n";
+    }
+}
 int main()
 {
-    int G[MAX][MAX], i, j, n, u;
-    printf("Enter no. of vertices:");
-    scanf("%d", &n);
-    printf("\nEnter the adjacency matrix:\n");
-    for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
-            scanf("%d", &G[i][j]);
-    printf("\nEnter the starting node:");
-    scanf("%d", &u);
-    dijkstra(G, n, u);
-//20dce019
-    return 0;
-}
-void dijkstra(int G[MAX][MAX], int n, int startnode)
-{
-    int cost[MAX][MAX], distance[MAX], pred[MAX];
-    int visited[MAX], count, mindistance, nextnode, i, j;
-    for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
-            if (G[i][j] == 0)
-                cost[i][j] = INFINITY;
-            else
-                cost[i][j] = G[i][j];
-    for (i = 0; i < n; i++)
-    {
-        distance[i] = cost[startnode][i];
-        pred[i] = startnode;
-        visited[i] = 0;
-    }
-    distance[startnode] = 0;
+    int V;
+    cout << "Enter total vertex: ";
+    cin >> V;
+    int source;
+    cout << "Enter Source Index: ";
+    cin >> source;
+    dijkstra(V, source);
+    cout << "\n20DCE019-Yatharth Chauhan";
 
-            visited[startnode] = 1;
-    count = 1;
-    while (count < n - 1)
-    {
-        mindistance = INFINITY;
-        for (i = 0; i < n; i++)
-            if (distance[i] < mindistance && !visited[i])
-            {
-                mindistance = distance[i];
-                nextnode = i;
-            }
-        visited[nextnode] = 1;
-        for (i = 0; i < n; i++)
-            if (!visited[i])
-                if (mindistance + cost[nextnode][i] < distance[i])
-                {
-                    distance[i] = mindistance + cost[nextnode][i];
-                    pred[i] = nextnode;
-                }
-        count++;
-    }
-    for (i = 0; i < n; i++)
-        if (i != startnode)
-        {
-            printf("\nDistance of node%d=%d", i, distance[i]);
-            printf("\nPath=%d", i);
-            j = i;
-            do
-            {
-                j = pred[j];
-                printf("<-%d", j);
-            } while (j != startnode);
-        }
+    return 0;
 }

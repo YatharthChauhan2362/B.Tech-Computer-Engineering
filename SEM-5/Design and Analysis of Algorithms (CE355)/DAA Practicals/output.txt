@@ -1,3 +1,8 @@
-Pattern is found at position: 7
+Pattern is found at position: 5
+Pattern is found at position: 11
+Pattern is found at position: 19
 
 20DCE019-Yatharth Chauhan
+
+
+

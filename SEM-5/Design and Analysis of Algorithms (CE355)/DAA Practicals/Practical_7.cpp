@@ -1,70 +1,64 @@
 #include <stdio.h>
-#define INFINITY 9999
-#define MAX 10
-void dijkstra(int G[MAX][MAX], int n, int startnode);
+#include <math.h>
+
+void queen(int row, int p);
+int chess[8], count;
+
 int main()
 {
-    int G[MAX][MAX], i, j, n, u;
-    printf("Enter no. of vertices:");
-    scanf("%d", &n);
-    printf("\nEnter the adjacency matrix:\n");
-    for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
-            scanf("%d", &G[i][j]);
-    printf("\nEnter the starting node:");
-    scanf("%d", &u);
-    dijkstra(G, n, u);
-    printf("\n20DCE019 - Yatharth Chauhan");
+    int p = 8;
+    queen(1, p);
     return 0;
+    printf("\n20DCE019-Yatharth Chauhan");
 }
-void dijkstra(int G[MAX][MAX], int n, int startnode)
+
+void print(int p)
 {
-    int cost[MAX][MAX], distance[MAX], pred[MAX];
-    int visited[MAX], count, mindistance, nextnode, i, j;
-    for (i = 0; i < n; i++)
-        for (j = 0; j < n; j++)
-            if (G[i][j] == 0)
-                cost[i][j] = INFINITY;
-            else
-                cost[i][j] = G[i][j];
-    for (i = 0; i < n; i++)
+    int i, j;
+    printf("\n\nThis is Solution no. %d:\n\n", ++count);
+    for (i = 1; i <= p; ++i)
+        printf("\t%d", i);
+
+    for (i = 1; i <= p; ++i)
     {
-        distance[i] = cost[startnode][i];
-        pred[i] = startnode;
-        visited[i] = 0;
-    }
-    distance[startnode] = 0;
-    visited[startnode] = 1;
-    count = 1;
-    while (count < n - 1)
-    {
-        mindistance = INFINITY;
-        for (i = 0; i < n; i++)
-            if (distance[i] < mindistance && !visited[i])
-            {
-                mindistance = distance[i];
-                nextnode = i;
-            }
-        visited[nextnode] = 1;
-        for (i = 0; i < n; i++)
-            if (!visited[i])
-                if (mindistance + cost[nextnode][i] < distance[i])
-                {
-                    distance[i] = mindistance + cost[nextnode][i];
-                    pred[i] = nextnode;
-                }
-        count++;
-    }
-    for (i = 0; i < n; i++)
-        if (i != startnode)
+        printf("\n\n%d", i);
+        for (j = 1; j <= p; ++j)
         {
-            printf("\nDistance of node%d=%d", i, distance[i]);
-            printf("\nPath=%d", i);
-            j = i;
-            do
-            {
-                j = pred[j];
-                printf("<-%d", j);
-            } while (j != startnode);
+            if (chess[i] == j)
+                printf("\tQ");
+            else
+                printf("\t-");
         }
+    }
+    printf("\n\n\nThere are total 92 solutions for 8-queens problem.");
+}
+
+int place(int row, int column)
+{
+    int i;
+    for (i = 1; i <= row - 1; ++i)
+    {
+        if (chess[i] == column)
+            return 0;
+        else if (abs(chess[i] - column) == abs(i - row))
+            return 0;
+    }
+
+    return 1;
+}
+
+void queen(int row, int p)
+{
+    int column;
+    for (column = 1; column <= p; ++column)
+    {
+        if (place(row, column))
+        {
+            chess[row] = column;
+            if (row == p)
+                print(p);
+            else
+                queen(row + 1, p);
+        }
+    }
 }

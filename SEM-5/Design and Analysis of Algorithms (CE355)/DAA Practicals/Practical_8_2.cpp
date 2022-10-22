@@ -1,32 +1,23 @@
-#include <bits/stdc++.h>
-
-#define int long long int
-#define F first
-#define S second
-#define pb push_back
-
+#include <string.h>
+#include <iostream>
 using namespace std;
-#define d 19
-
+#define d 10
 void rabinKarp(char pattern[], char text[], int q)
 {
     int m = strlen(pattern);
     int n = strlen(text);
     int i, j;
+    int c = 0;
     int p = 0;
     int t = 0;
     int h = 1;
-
     for (i = 0; i < m - 1; i++)
         h = (h * d) % q;
-
-    // Calculate hash value for pattern and text
     for (i = 0; i < m; i++)
     {
         p = (d * p + pattern[i]) % q;
         t = (d * t + text[i]) % q;
     }
-
     for (i = 0; i <= n - m; i++)
     {
         if (p == t)
@@ -35,35 +26,28 @@ void rabinKarp(char pattern[], char text[], int q)
             {
                 if (text[i + j] != pattern[j])
                     break;
+                c++;
             }
-
             if (j == m)
-                cout << "Pattern is found at position: " << i + 1 << endl;
+                cout << "\n\nPattern is found at position: " << i + 1 << endl;
         }
-
         if (i < n - m)
         {
+            c++;
             t = (d * (t - text[i] * h) + text[i + m]) % q;
-
             if (t < 0)
                 t = (t + q);
         }
     }
+    cout << "\ncounter:" << c;
 }
-int32_t main()
+int main()
 {
-
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
     char text[] = "2359023141526739921";
     char pattern[] = "31415";
+    cout << "Text : " << text;
+    cout << "\nPattern :" << pattern;
     int q = 13;
     rabinKarp(pattern, text, q);
-
     cout << "\n20DCE019-Yatharth Chauhan";
-
-    return 0;
 }
