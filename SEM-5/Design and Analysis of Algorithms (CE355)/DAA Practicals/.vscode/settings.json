@@ -3,5 +3,8 @@
         "iostream": "cpp",
         "ostream": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "cSpell.words": [
+        "Chauhan"
+    ]
 }
