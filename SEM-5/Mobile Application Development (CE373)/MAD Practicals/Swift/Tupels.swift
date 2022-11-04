@@ -13,5 +13,3 @@ print(first)
 let (f1, _) = ("as", "you")
 print(f1)
 
- 
-
