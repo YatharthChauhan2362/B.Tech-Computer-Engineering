@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void implimentFirstFit(int blockSize[], int blocks, int processSize[], int processes)
 {
     // This will store the block id of the allocated block to a process
