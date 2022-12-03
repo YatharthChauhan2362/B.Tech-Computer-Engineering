@@ -144,7 +144,7 @@ This readme also consists of all the details of all the semesters and the course
 | CE342       | DESIGN & ANALYSIS OF ALGORITHMS |
 | CE343       | SOFTWARE ENGINEERING            |
 | CE354       | OPERATING SYSTEM                |
-| CS346       | SUMMER INTERNSHIP-I             |
+| CE346       | SUMMER INTERNSHIP-I             |
 | CE356       | SOFTWARE GROUP PROJECT - III    |
 | CE373       | MOBILE APPLICATION DEVELOPMENT  |
 | HS131.02A   | COMMUNICATION AND SOFT SKILLS   |
