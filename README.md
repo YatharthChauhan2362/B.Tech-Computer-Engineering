@@ -158,17 +158,19 @@ This readme also consists of all the details of all the semesters and the course
 [![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/YatharthChauhan2362/B.Tech-Computer-Engineering/tree/main/SEM-5)
 <br><br>
 
-<!-- ## SEM VI
+ ## SEM 6
 ### Course Details
 COURSE CODE | COURSE NAME
 ------------| -------------
-CS373       | INTERNET OF THINGS
-CS344       | MACHINE LEARNING
-CS345       | CRYPTOGRAPHY AND NETWORK SECURITY
-CS346       | SOFTWARE ENGINEERING
+CE357       | ARTIFICIAL INTELLIGENCE
+CE348       | INFORMATION SECURITY
 CE349       | THEORY OF COMPUTATION
+CE358       | COMPUTER NETWORKS
+CE359       | SOFTWARE GROUP PROJECT-IV
+CE379       | IMAGE PROCESSING & COMPUTER VISION
 HS132.02 A  | CONTRIBUTORY PERSONALITY DEVELOPMENT
 
+<!--
 ### Submissions
 [![](https://img.shields.io/badge/Practical_Files_&_Source_Codes-Click_Here-%23FF0000.svg?&style=flat&logoColor=white&color=white)](https://github.com/rudrabarad/Bachelors-File-Submission/tree/master/SEM%20VI)
 <br><br>
