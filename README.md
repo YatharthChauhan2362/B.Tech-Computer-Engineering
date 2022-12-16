@@ -6,7 +6,7 @@ Checkout my Portfolio Website: (https://yatharthchauhan.me)
 
 <!--
 This repository is collection of all the Study Materials and submissions done by me**YATHARTH CHAUHAN - 20DCE019** throughout MY Bachelor's Degree which consists of `Study Materials`, `Practicals`, `Assignemnts`, `Pratical Files`, `Notes`, `External Practical Files` and `Exam Answersheets`.
--->
+ -->
 
 Note: To access all materials(Drive Link), You can connect me on any plateform and send request access so I can give access to you then you can get all materials(`PPT & Word Files`, `Assignemnts`, `Syllabus`, `Practical Files` & `Lab Manual`, `Notes` etc.
 
