@@ -30,7 +30,7 @@ int main()
 string encrypt(string msg, int key)
 {
     string text;
-    for (int i = 0; i < msg.length(); i++)
+    for (int i = 0; i < msg.length(); i++
         text += 'a' + (msg[i] + key - 'a') % 26;
     return text;
 }
