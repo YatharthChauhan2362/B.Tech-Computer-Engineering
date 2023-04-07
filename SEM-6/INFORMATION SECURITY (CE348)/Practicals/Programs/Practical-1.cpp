@@ -25,12 +25,12 @@ int main()
          << endl;
     bruteForce(cipherText);
 
-    cout << "\n20DCE019 - Yatharth Chauhan";
+    cout << "\n20DCE011 - Karan Bhatt";
 }
 string encrypt(string msg, int key)
 {
     string text;
-    for (int i = 0; i < msg.length(); i++
+    for (int i = 0; i < msg.length(); i++)
         text += 'a' + (msg[i] + key - 'a') % 26;
     return text;
 }
