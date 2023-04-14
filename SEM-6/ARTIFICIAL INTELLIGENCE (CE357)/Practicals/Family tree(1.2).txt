@@ -1,0 +1,15 @@
+//Family Tree
+
+father(X,Y) :- male(X),parent(X,Y).
+mother(X,Y) :- female(Y),parent(X,Y). 
+grandfather(X,Y) :- male(X),parent(X,Somebody),parent(Somebody,Y).
+grandmother(X,Y) :- female(Y),parent(X,Somebody),parent(Somebody,Y).
+brother(X,Y) :- male(X),parent(Somebody,X),parent(Somebody,Y). X/Y.
+Charotar University of Science and Technology
+Devang Patel Institute of Advance Technology and 
+Research
+Department of Computer Engineering
+20DCE016 5
+sister(X,Y) :- female(X),parent(Somebody,X),parent(Somebody,Y). 
+uncle(X,Y) :- male(X),brother(X,Somebody),parent(Somebody,Y).
+aunty(X,Y) :- female(X),uncle(X,Somebody).
