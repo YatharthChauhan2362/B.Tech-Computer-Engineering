@@ -6,8 +6,6 @@ loop(N) :- N>0, write('value of N is: '), write(N), nl,
 S is N-1, loop(S).
 
 
-
-
 % Base case for recursion: sum of 0 numbers is 0
 sum(0, 0).
 
